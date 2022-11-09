@@ -1,0 +1,36 @@
+# conda env create --file environment.yml
+# conda activate co-mod-gan-pytorch
+
+# conda env update --file environment.yml --prune
+
+# conda activate base
+# conda env remove -n co-mod-gan-pytorch
+
+# $ git submodule init
+# $ git submodule update
+
+name: co-mod-gan-pytorch
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - autopep8
+  - coverage
+  # - cudatoolkit=11
+  - dill
+  - jinja2
+  - matplotlib
+  - ninja
+  - opencv
+  - pip
+  - pytest
+  - pytest-cov
+  - python=3.10
+  - pytorch
+  - torchvision
+  - pip:
+    - coremltools
+    - onnx
+    - onnxconverter-common
+    - onnxruntime
+    - git+https://github.com/zengxianyu/pytorch-fid

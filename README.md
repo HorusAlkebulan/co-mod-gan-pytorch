@@ -40,10 +40,28 @@ converted model:
 
 2. use the following command as a minimal example of usage
 
-```
+```bash
 ./test.sh
 ```
-
+or
+```bash
+python test.py \
+    --how_many 10 \
+	--mixing 0 \
+	--batchSize 1 \
+	--nThreads 2 \
+	--name comod-ffhq-512 \
+	--dataset_mode testimage \
+	--image_dir ./ffhq_debug/images \
+	--mask_dir ./ffhq_debug/masks \
+    --output_dir ./ffhq_debug \
+	--load_size 512 \
+	--crop_size 512 \
+	--z_dim 512 \
+	--model comod \
+	--netG comodgan \
+    --which_epoch co-mod-gan-ffhq-9-025000
+```
 ### Training
 1. download example datasets for training and validation
 
